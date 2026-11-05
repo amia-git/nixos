@@ -14,12 +14,15 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixcord.url = "github:4evy/nixcord";
+    nixos-core.url = "github:manic-systems/nixos-core";
   };
   outputs = inputs@{ self, nixpkgs, ... }: {
     nixosConfigurations.stuckmoth = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       modules = [
         inputs.disko.nixosModules.disko
+        inputs.nixos-core.nixosModules.default
+        { system.nixos-core.enable = true; }
         inputs.home-manager.nixosModules.home-manager
         {
           home-manager = {
