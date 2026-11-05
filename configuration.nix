@@ -11,6 +11,7 @@
       ./features/nvidia.nix
       ./features/nix.nix
       ./features/gaming.nix
+      ./features/mullvad.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
