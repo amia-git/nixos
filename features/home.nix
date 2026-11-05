@@ -4,6 +4,7 @@
   imports = [
     ./home/git.nix
     ./home/discord.nix
+    ./home/spotify.nix
   ];
 
   home = {
