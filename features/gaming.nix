@@ -49,6 +49,7 @@
   services.bpftune.enable = true;
   programs.steam = {
     enable = true;
+    package = pkgs.millennium-steam;
     extraPackages = with pkgs; [
       gamemode
       mangohud_git

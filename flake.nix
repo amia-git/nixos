@@ -19,6 +19,10 @@
     nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel";
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
+    millennium = {
+      url = "github:SteamClientHomebrew/Millennium?dir=packages/nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
   outputs = inputs@{ self, nixpkgs, ... }: {
     nixosConfigurations.stuckmoth = nixpkgs.lib.nixosSystem {
@@ -31,6 +35,7 @@
           {
             nixpkgs.overlays = [
               inputs.nix-cachyos-kernel.overlays.pinned
+              inputs.millennium.overlays.default
             ];
           }
         )
