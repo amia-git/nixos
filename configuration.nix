@@ -36,6 +36,21 @@
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
+  nixpkgs.overlays = [
+    (_final: prev: { bees = prev.bees_git; })
+  ];
+
+  services.beesd = {
+    filesystems = {
+      root = {
+        spec = "/dev/mapper/crypted";
+        hashTableSizeMB = 2048;
+        verbosity = "crit";
+        extraOptions = [ "--loadavg-target" "5.0" ];
+      };
+    };
+  };
+
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
   # console = {
