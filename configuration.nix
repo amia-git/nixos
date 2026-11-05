@@ -54,6 +54,30 @@
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
+  i18n.inputMethod = {
+    enable = true;
+    type = "fcitx5";
+    fcitx5 = {
+      waylandFrontend = true;
+      addons = [ pkgs.fcitx5-mozc ];
+      settings.inputMethod = {
+        "Groups/0" = {
+          Name = "Default";
+          "Default Layout" = "us";
+          DefaultIM = "mozc";
+        };
+        "Groups/0/Items/0" = {
+          Name = "keyboard-us";
+          Layout = "";
+        };
+        "Groups/0/Items/1" = {
+          Name = "mozc";
+          Layout = "";
+        };
+        GroupOrder."0" = "Default";
+      };
+    };
+  };
   # console = {
   #   font = "Lat2-Terminus16";
   #   keyMap = "us";
@@ -86,6 +110,8 @@
 
   services.displayManager.plasma-login-manager.enable = true;
   services.desktopManager.plasma6.enable = true;
+  environment.plasma6.excludePackages = [ pkgs.kdePackages.discover ];
+  programs.kde-pim.kontact = false;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.aria = {
