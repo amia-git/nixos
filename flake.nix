@@ -25,6 +25,12 @@
     };
   };
   outputs = inputs@{ self, nixpkgs, ... }: {
+    packages.x86_64-linux.frame =
+      let
+        pkgs = import nixpkgs { system = "x86_64-linux"; };
+      in
+      pkgs.callPackage ./pkgs/frame.nix { };
+
     nixosConfigurations.stuckmoth = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       modules = [

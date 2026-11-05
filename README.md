@@ -1,1 +1,31 @@
 # NixOS flake
+
+## Packages
+
+[Frame](https://framegui.app/) is available for `x86_64-linux` as `packages.x86_64-linux.frame`.
+
+Run it directly:
+
+```sh
+nix run github:ariaofdelusion/nixos#frame
+```
+
+Install it in your profile:
+
+```sh
+nix profile install github:ariaofdelusion/nixos#frame
+```
+
+To use it from another NixOS flake, add this flake as an input:
+
+```nix
+inputs.aria-nixos.url = "github:ariaofdelusion/nixos";
+```
+
+Then include the package in your configuration:
+
+```nix
+environment.systemPackages = [
+  inputs.aria-nixos.packages.${pkgs.stdenv.hostPlatform.system}.frame
+];
+```
