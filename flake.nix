@@ -13,6 +13,7 @@
       url = "github:nix-community/disko";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixcord.url = "github:4evy/nixcord";
   };
   outputs = inputs@{ self, nixpkgs, ... }: {
     nixosConfigurations.stuckmoth = nixpkgs.lib.nixosSystem {
