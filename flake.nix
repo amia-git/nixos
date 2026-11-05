@@ -17,12 +17,14 @@
     # PR #84: remove references to the removed scripted initrd options.
     nixos-core.url = "github:manic-systems/nixos-core/13e4d6d811e1e6fa3c9366613931e59ba10b3bd4";
     nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel";
+    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
   };
   outputs = inputs@{ self, nixpkgs, ... }: {
     nixosConfigurations.stuckmoth = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       modules = [
         inputs.disko.nixosModules.disko
+        inputs.chaotic.nixosModules.default
         (
           { pkgs, ... }:
           {

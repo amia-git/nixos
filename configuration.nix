@@ -10,6 +10,7 @@
       ./hardware-configuration.nix
       ./features/nvidia.nix
       ./features/nix.nix
+      ./features/gaming.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
