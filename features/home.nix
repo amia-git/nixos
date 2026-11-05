@@ -14,6 +14,8 @@
     packages = with pkgs; [
       fastfetch
       btop
+      eza
+      dust
     ];
   };
 }
