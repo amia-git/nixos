@@ -14,7 +14,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixcord.url = "github:4evy/nixcord";
-    nixos-core.url = "github:manic-systems/nixos-core";
+    # PR #84: remove references to the removed scripted initrd options.
+    nixos-core.url = "github:manic-systems/nixos-core/13e4d6d811e1e6fa3c9366613931e59ba10b3bd4";
   };
   outputs = inputs@{ self, nixpkgs, ... }: {
     nixosConfigurations.stuckmoth = nixpkgs.lib.nixosSystem {
