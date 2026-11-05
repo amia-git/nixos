@@ -106,6 +106,8 @@
     vscode
     codex
     nixd
+    darkly
+    papirus-icon-theme
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

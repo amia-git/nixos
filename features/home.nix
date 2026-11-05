@@ -10,5 +10,8 @@
     homeDirectory = "/home/aria";
     username = "aria";
     stateVersion = "26.05";
+    packages = with pkgs; [
+      fastfetch
+    ];
   };
 }
