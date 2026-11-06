@@ -24,6 +24,7 @@
       url = "github:SteamClientHomebrew/Millennium?dir=packages/nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    waydroid-a17-nvidia-nix.url = "github:ariaofdelusion/waydroid-a17-nvidia-nix";
   };
   outputs = inputs@{ self, nixpkgs, ... }: {
     packages.x86_64-linux.frame =
@@ -67,6 +68,10 @@
             extraSpecialArgs = { inherit inputs; };
             users.aria = import ./features/home.nix;
           };
+        }
+        inputs.waydroid-a17-nvidia-nix.nixosModules.default
+        {
+          virtualisation.waydroid-a17-nvidia-nix.enable = true;
         }
         ./configuration.nix
         ./disko.nix
