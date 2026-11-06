@@ -112,7 +112,7 @@
 
   services.displayManager.plasma-login-manager.enable = true;
   services.desktopManager.plasma6.enable = true;
-  environment.plasma6.excludePackages = [ pkgs.kdePackages.discover ];
+  environment.plasma6.excludePackages = [ pkgs.kdePackages.discover pkgs.kdePackages.kontact ];
   programs.kde-pim.kontact = false;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
@@ -141,6 +141,8 @@
     papirus-icon-theme
     (pkgs.callPackage ./pkgs/frame.nix { })
     (pkgs.callPackage ./pkgs/photon-studio.nix { })
+    haruna
+    yt-dlp
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
