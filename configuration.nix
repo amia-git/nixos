@@ -12,6 +12,7 @@
       ./features/nix.nix
       ./features/gaming.nix
       ./features/mullvad.nix
+      ./features/obs.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
