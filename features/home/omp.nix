@@ -36,7 +36,7 @@ in
       composer.shape = "band";
       theme.dark = "titanium";
       setupVersion = 2;
-      memory.backend = "local";
+      memory.backend = "mnemopi";
       autolearn.enabled = true;
       bash.gitGuard = true;
       bashInterceptor.enabled = true;
