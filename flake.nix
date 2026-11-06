@@ -1,9 +1,4 @@
 {
-  nixConfig = {
-    extra-substituters = [ "https://cache.numtide.com" ];
-    extra-trusted-public-keys = [ "niks3.numtide.com-1:DTx8wZduET09hRmMtKdQDxNNthLQETkc/yaX7M4qK0g=" ];
-  };
-
   inputs = {
     # This is pointing to an unstable release.
     # If you prefer a stable release instead, you can change the word unstable to the latest number shown here: https://nixos.org/download
