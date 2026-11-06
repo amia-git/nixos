@@ -19,6 +19,7 @@
     nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel";
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
+    llm-agents.url = "github:numtide/llm-agents.nix";
     millennium = {
       url = "github:SteamClientHomebrew/Millennium?dir=packages/nix";
       inputs.nixpkgs.follows = "nixpkgs";
