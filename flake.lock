@@ -635,11 +635,11 @@
         "nixpkgs": "nixpkgs_8"
       },
       "locked": {
-        "lastModified": 1793926986,
-        "narHash": "sha256-yWblaNGqT3fbmp6/VwSXC8kbwtdVtJo8rTv/JSQ/exU=",
+        "lastModified": 1793932097,
+        "narHash": "sha256-+H3/LN8sIqGj384XOKdO9MBicVj3DeplovTodcUnZmQ=",
         "owner": "ariaofdelusion",
         "repo": "waydroid-a17-nvidia-nix",
-        "rev": "638053ddf88a612b842dd406e0e7333971e7c582",
+        "rev": "b692fc89566d9eb96ccf8f90c22ca19f6d0a05e4",
         "type": "github"
       },
       "original": {
