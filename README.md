@@ -61,5 +61,3 @@ environment.systemPackages = [
   inputs.aria-nixos.packages.${pkgs.stdenv.hostPlatform.system}.photon-studio
 ];
 ```
-
-The flake output already allows Photon Studio's unfree license, so these examples do not need an additional unfree setting.
