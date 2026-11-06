@@ -136,6 +136,7 @@
     vscode
     codex
     inputs.llm-agents.packages.${pkgs.stdenv.hostPlatform.system}.chatgpt
+    inputs.llm-agents.packages.${pkgs.stdenv.hostPlatform.system}.opencode2-desktop
     nixd
     darkly
     papirus-icon-theme
