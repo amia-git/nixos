@@ -35,6 +35,19 @@
       btop
       eza
       dust
+      python3
+      uv
+      ruff
+      nodejs
+      gcc
+      gnumake
+      cmake
+      pkg-config
+      curl
+      ripgrep
+      fd
+      jaq
+      unzip
     ];
   };
 }
