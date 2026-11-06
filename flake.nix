@@ -35,6 +35,7 @@
       let
         pkgs = import nixpkgs {
           system = "x86_64-linux";
+          # allow the unfree package for exposed flake package
           config.allowUnfreePredicate = pkg: nixpkgs.lib.getName pkg == "photon-studio";
         };
       in
