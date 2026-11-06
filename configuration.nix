@@ -143,9 +143,6 @@
     wget
     vscode
     codex
-    # git-ai: commit-native baseline/provenance for code edits; official
-    # package (wrapped git + git-ai) from the upstream flake input.
-    inputs.git-ai.packages.${pkgs.stdenv.hostPlatform.system}.default
     inputs.llm-agents.packages.${pkgs.stdenv.hostPlatform.system}.chatgpt
     inputs.llm-agents.packages.${pkgs.stdenv.hostPlatform.system}.opencode2-desktop
     nixd
