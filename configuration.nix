@@ -142,6 +142,8 @@
 
   programs.firefox.enable = true;
 
+  fonts.packages = [ pkgs.nerd-fonts.fira-code ];
+
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
   environment.systemPackages = with pkgs; [
