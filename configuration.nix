@@ -26,6 +26,20 @@
   # Use latest kernel.
   boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-latest-x86_64-v3;
 
+  boot.tmp = {
+    useTmpfs = true;
+    tmpfsSize = "50%";
+  };
+
+  systemd.tmpfiles.rules = [ "d /tmp 1777 root root 7d" ];
+  systemd.timers.systemd-tmpfiles-clean = {
+    wantedBy = [ "timers.target" ];
+    timerConfig = {
+      OnBootSec = "15min";
+      OnUnitActiveSec = "1d";
+    };
+  };
+
   networking.hostName = "stuckmoth"; # Define your hostname.
 
   # Configure network connections interactively with nmcli or nmtui.
