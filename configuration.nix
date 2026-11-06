@@ -13,8 +13,12 @@
       ./features/gaming.nix
       ./features/mullvad.nix
       ./features/obs.nix
+      inputs.lichii-nix.nixosModules.default
+      {
+        programs.lichii.enable = true;
+      }
     ];
-
+  
   # Use the systemd-boot EFI boot loader.
   boot.loader.grub = {
     enable = true;

@@ -25,6 +25,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     waydroid-a17-nvidia-nix.url = "github:amia-git/waydroid-a17-nvidia-nix";
+    lichii-nix.url = "github:amia-git/lichii-nix/v0.1.0";
   };
   outputs = inputs@{ self, nixpkgs, ... }: {
     packages.x86_64-linux.frame =
