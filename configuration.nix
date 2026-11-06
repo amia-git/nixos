@@ -145,7 +145,6 @@
     codex
     inputs.llm-agents.packages.${pkgs.stdenv.hostPlatform.system}.chatgpt
     inputs.llm-agents.packages.${pkgs.stdenv.hostPlatform.system}.opencode2-desktop
-    inputs.llm-agents.packages.${pkgs.stdenv.hostPlatform.system}.omp
     nixd
     darkly
     papirus-icon-theme
