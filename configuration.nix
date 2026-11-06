@@ -54,6 +54,7 @@
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
+  i18n.extraLocales = [ "ja_JP.UTF-8/UTF-8" ];
   i18n.inputMethod = {
     enable = true;
     type = "fcitx5";
