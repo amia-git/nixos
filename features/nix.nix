@@ -12,6 +12,7 @@
   }) ];
   nix.package = pkgs.lixPackageSets.stable.lix;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.warn-dirty = false;
   nix.settings.substituters = [
     "https://cache.numtide.com"
     "https://cache.lantian.pub/lantian"
