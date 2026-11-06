@@ -29,15 +29,7 @@
   boot.tmp = {
     useTmpfs = true;
     tmpfsSize = "50%";
-  };
-
-  systemd.tmpfiles.rules = [ "d /tmp 1777 root root 7d" ];
-  systemd.timers.systemd-tmpfiles-clean = {
-    wantedBy = [ "timers.target" ];
-    timerConfig = {
-      OnBootSec = "15min";
-      OnUnitActiveSec = "1d";
-    };
+    cleanOnBoot = true;
   };
 
   networking.hostName = "stuckmoth"; # Define your hostname.
@@ -153,6 +145,7 @@
     codex
     inputs.llm-agents.packages.${pkgs.stdenv.hostPlatform.system}.chatgpt
     inputs.llm-agents.packages.${pkgs.stdenv.hostPlatform.system}.opencode2-desktop
+    inputs.llm-agents.packages.${pkgs.stdenv.hostPlatform.system}.omp
     nixd
     darkly
     papirus-icon-theme
