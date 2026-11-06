@@ -137,6 +137,7 @@
     darkly
     papirus-icon-theme
     (pkgs.callPackage ./pkgs/frame.nix { })
+    (pkgs.callPackage ./pkgs/photon-studio.nix { })
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

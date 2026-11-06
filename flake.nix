@@ -31,6 +31,15 @@
       in
       pkgs.callPackage ./pkgs/frame.nix { };
 
+    packages.x86_64-linux.photon-studio =
+      let
+        pkgs = import nixpkgs {
+          system = "x86_64-linux";
+          config.allowUnfreePredicate = pkg: nixpkgs.lib.getName pkg == "photon-studio";
+        };
+      in
+      pkgs.callPackage ./pkgs/photon-studio.nix { };
+
     nixosConfigurations.stuckmoth = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       modules = [
