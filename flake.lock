@@ -637,13 +637,13 @@
       "locked": {
         "lastModified": 1793932097,
         "narHash": "sha256-+H3/LN8sIqGj384XOKdO9MBicVj3DeplovTodcUnZmQ=",
-        "owner": "ariaofdelusion",
+        "owner": "amia-git",
         "repo": "waydroid-a17-nvidia-nix",
         "rev": "b692fc89566d9eb96ccf8f90c22ca19f6d0a05e4",
         "type": "github"
       },
       "original": {
-        "owner": "ariaofdelusion",
+        "owner": "amia-git",
         "repo": "waydroid-a17-nvidia-nix",
         "type": "github"
       }

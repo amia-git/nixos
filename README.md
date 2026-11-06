@@ -9,26 +9,26 @@
 Run it directly:
 
 ```sh
-nix run github:ariaofdelusion/nixos#frame
+nix run github:amia-git/nixos#frame
 ```
 
 Install it in your profile:
 
 ```sh
-nix profile install github:ariaofdelusion/nixos#frame
+nix profile install github:amia-git/nixos#frame
 ```
 
 To use it from another NixOS flake, add this flake as an input:
 
 ```nix
-inputs.aria-nixos.url = "github:ariaofdelusion/nixos";
+inputs.amia-nixos.url = "github:amia-git/nixos";
 ```
 
 Then include the package in your configuration:
 
 ```nix
 environment.systemPackages = [
-  inputs.aria-nixos.packages.${pkgs.stdenv.hostPlatform.system}.frame
+  inputs.amia-nixos.packages.${pkgs.stdenv.hostPlatform.system}.frame
 ];
 ```
 
@@ -39,25 +39,25 @@ environment.systemPackages = [
 Run it directly:
 
 ```sh
-nix run github:ariaofdelusion/nixos#photon-studio
+nix run github:amia-git/nixos#photon-studio
 ```
 
 Install it in your profile:
 
 ```sh
-nix profile install github:ariaofdelusion/nixos#photon-studio
+nix profile install github:amia-git/nixos#photon-studio
 ```
 
 To use it from another NixOS flake, add this flake as an input:
 
 ```nix
-inputs.aria-nixos.url = "github:ariaofdelusion/nixos";
+inputs.amia-nixos.url = "github:amia-git/nixos";
 ```
 
 Then include the package in your configuration:
 
 ```nix
 environment.systemPackages = [
-  inputs.aria-nixos.packages.${pkgs.stdenv.hostPlatform.system}.photon-studio
+  inputs.amia-nixos.packages.${pkgs.stdenv.hostPlatform.system}.photon-studio
 ];
 ```
