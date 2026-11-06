@@ -6,7 +6,6 @@
     ./home/discord.nix
     ./home/spotify.nix
     ./home/kitty.nix
-    ./home/slop.nix
   ];
 
   programs.nushell = {

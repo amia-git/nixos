@@ -20,10 +20,6 @@
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     llm-agents.url = "github:numtide/llm-agents.nix";
-    git-ai = {
-      url = "github:git-ai-project/git-ai";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     millennium = {
       url = "github:SteamClientHomebrew/Millennium?dir=packages/nix";
       inputs.nixpkgs.follows = "nixpkgs";
